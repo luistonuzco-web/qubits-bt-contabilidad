@@ -1,0 +1,4 @@
+# Editor swap files and local state
+*.swp
+*.swo
+.DS_Store

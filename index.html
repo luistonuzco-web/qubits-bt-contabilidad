@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f7f5" />
+  <title>QUBITS-BT · Contabilidad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#inicio"><span class="brand-mark">Q</span><span><strong>QUBITS-BT</strong><small>CONSULTORÍA</small></span></a>
+      <div class="company-chip"><span class="company-dot"></span><span><b>Mi empresa</b><small>Contabilidad personal</small></span><span class="chevron">⌄</span></div>
+      <p class="nav-label">GESTIÓN</p>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-item active" data-view="inicio"><span class="nav-icon">▦</span>Resumen</button>
+        <button class="nav-item" data-view="facturas"><span class="nav-icon">▤</span>Facturas</button>
+        <button class="nav-item" data-view="ingresos"><span class="nav-icon">↙</span>Ingresos</button>
+        <button class="nav-item" data-view="gastos"><span class="nav-icon">↗</span>Gastos</button>
+        <button class="nav-item" data-view="proveedores"><span class="nav-icon">▣</span>Proveedores</button>
+        <button class="nav-item" data-view="clientes"><span class="nav-icon">♙</span>Clientes</button>
+        <button class="nav-item" data-view="cuentas"><span class="nav-icon">▧</span>Cuentas contables</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-card"><div class="help-icon">✳</div><b>Tu negocio, en orden</b><p>Registra cada movimiento y consulta tus resultados por periodo.</p></div><div class="user-profile"><div class="avatar">Q</div><span><b>QUBITS-BT</b><small>Administrador</small></span><span class="more">···</span></div></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div class="mobile-brand"><span class="brand-mark">Q</span><strong>QUBITS-BT</strong></div><div class="breadcrumb"><span>Contabilidad</span><span class="crumb-sep">/</span><b id="crumb-current">Resumen</b></div><div class="top-actions"><span class="today" id="today-label"></span><button class="icon-button" title="Ayuda">?</button><button class="btn btn-secondary sign-out" id="sign-out">Salir</button><div class="avatar top-avatar">Q</div></div></header>
+      <section id="view-root" class="content"></section>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status"></div>
+  <div id="auth-root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2"></script>
+  <script src="app.js"></script>
+  <script src="income.js"></script>
+  <script src="suppliers.js"></script>
+</body>
+</html>
